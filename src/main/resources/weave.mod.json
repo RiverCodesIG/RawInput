@@ -1,0 +1,14 @@
+{
+  "name": "Raw Input",
+  "version": "1.0",
+  "description": "Handles Mouse inputs directly.",
+  "modId": "Raw Input",
+  "authors": "River & Syz (thx syz <3)",
+  "entrypoints": [
+    "me.nyaaa.rawinput.Main"
+  ],
+  "hooks": [
+    "me.nyaaa.rawinput.hooks.LunarPollingRateHook",
+    "me.nyaaa.rawinput.hooks.MinecraftHook"
+  ]
+}
