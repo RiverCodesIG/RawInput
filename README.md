@@ -1,3 +1,7 @@
+## Deprecation Notice
+Moonsworth, LLC decided to pay their Indian developers this week, and we finally got raw input offically.
+> Note: I'll likely revive this when Weave starts supporting multiple clients.
+
 ## Raw Input
 Directly handles input from the mouse.
 
