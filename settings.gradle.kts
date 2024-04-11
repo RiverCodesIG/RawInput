@@ -1,9 +1,8 @@
-val projectName: String by settings
-rootProject.name = projectName
+rootProject.name = "RawInput-Weave"
 
 pluginManagement {
     repositories {
         gradlePluginPortal()
-        maven("https://jitpack.io")
+        maven("https://repo.weavemc.dev/releases")
     }
 }

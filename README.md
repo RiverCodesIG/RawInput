@@ -1,7 +1,3 @@
-## Deprecation Notice
-Moonsworth, LLC decided to pay their Indian developers this week, and we finally got raw input offically.
-> Note: I'll likely revive this when Weave starts supporting multiple clients.
-
 ## Raw Input
 Directly handles input from the mouse.
 
@@ -10,5 +6,8 @@ Directly handles input from the mouse.
 - Supports multiple mice.
 - ~~Automatically adds new mice.~~ (broken, please help)
 - Removes Lunar Client's polling rate notification.
+
+## Fork info
+This is just a fork to get this working on the latest version of Weave on the vanilla client.
 
 ---
