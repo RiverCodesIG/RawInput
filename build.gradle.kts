@@ -1,17 +1,22 @@
 plugins {
-    kotlin("jvm") version "1.9.23"
-    id("net.weavemc.gradle") version "1.0.0-PRE2"
+    kotlin("jvm") version ("2.0.0-RC1")
+    id("net.weavemc.gradle") version ("1.0.0-PRE2")
 }
 
-group = "me.nyaaa"
-version = "2.0"
+val projectVersion: String by project
+val projectGroup:   String by project
+
+group = projectGroup
+version = projectVersion
 
 weave {
     configure {
-        name = "rawinput"
-        modId = "rawinput"
-        entryPoints = listOf("me.nyaaa.rawinput.Main")
-        mixinConfigs = listOf("rawinput.mixins.json")
+        name = "Raw Input"
+        modId = "RawInput"
+        hooks = listOf(
+            "me.river.rawinput.hooks.MinecraftHook",
+            "me.river.rawinput.hooks.LunarPollingHook"
+        )
         mcpMappings()
     }
     version("1.8.9")
@@ -27,7 +32,6 @@ dependencies {
     implementation("net.weavemc.api:common:1.0.0-PRE2")
     implementation("net.weavemc:internals:1.0.0-PRE2")
     compileOnly("org.spongepowered:mixin:0.8.5")
-
 }
 
 kotlin {
