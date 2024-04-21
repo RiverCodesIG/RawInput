@@ -6,9 +6,5 @@
   "authors": "River & Syz (thx syz <3)",
   "entrypoints": [
     "me.nyaaa.rawinput.Main"
-  ],
-  "hooks": [
-    "me.nyaaa.rawinput.hooks.LunarPollingRateHook",
-    "me.nyaaa.rawinput.hooks.MinecraftHook"
   ]
 }
