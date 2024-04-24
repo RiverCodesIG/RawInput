@@ -4,6 +4,7 @@ rootProject.name = projectName
 pluginManagement {
     repositories {
         gradlePluginPortal()
-        maven("https://repo.weavemc.dev/releases")
+        maven("https://maven.fabricmc.net/")
+        maven("https://repo.legacyfabric.net/repository/legacyfabric/")
     }
 }

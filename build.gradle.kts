@@ -1,6 +1,7 @@
 plugins {
     kotlin("jvm") version ("2.0.0-RC1")
-    id("net.weavemc.gradle") version ("1.0.0-PRE2")
+    id("fabric-loom") version ("1.5-SNAPSHOT")
+    id("legacy-looming") version ("1.5-SNAPSHOT")
 }
 
 val projectVersion: String by project
@@ -9,29 +10,13 @@ val projectGroup:   String by project
 group = projectGroup
 version = projectVersion
 
-weave {
-    configure {
-        name = "Raw Input"
-        modId = "RawInput"
-        hooks = listOf(
-            "me.river.rawinput.hooks.MinecraftHook",
-            "me.river.rawinput.hooks.LunarPollingHook"
-        )
-        mcpMappings()
-    }
-    version("1.8.9")
-}
-
-repositories {
-    mavenCentral()
-    maven("https://repo.weavemc.dev/releases")
-    maven("https://repo.spongepowered.org/maven")
-}
-
 dependencies {
-    implementation("net.weavemc.api:common:1.0.0-PRE2")
-    implementation("net.weavemc:internals:1.0.0-PRE2")
-    compileOnly("org.spongepowered:mixin:0.8.5")
+    minecraft("com.mojang:minecraft:1.8.9")
+    mappings(legacy.yarn("1.8.9", "535"))
+
+    modImplementation("net.fabricmc:fabric-loader:0.15.6")
+    modImplementation("net.legacyfabric.legacy-fabric-api:legacy-fabric-api:1.9.1+1.8.9")
+    modImplementation("net.fabricmc:fabric-language-kotlin:1.10.17+kotlin.1.9.22")
 }
 
 kotlin {

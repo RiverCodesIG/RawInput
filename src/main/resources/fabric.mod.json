@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "name": "Raw Input",
+  "id": "rawinput",
+  "description": "Directly handles input from the mouse.",
+  "version": "2.0",
+  "environment": "client",
+  "mixins": [
+    "rawinput.mixins.json"
+  ],
+  "depends": {
+    "fabric-language-kotlin": ">=1.10.17+kotlin.1.9.22",
+    "fabricloader": ">=0.14.19",
+    "minecraft": "1.8.9"
+  },
+  "authors": [
+    "River"
+  ]
+}
